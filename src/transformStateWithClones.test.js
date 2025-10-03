@@ -7,8 +7,7 @@ test('Should create a new object with a single added property', () => {
 
   expect(transformStateWithClones(state, [
     {
-      type: 'addProperties',
-      extraData: { name: 'Jim' },
+      type: 'addProperties', extraData: { name: 'Jim' },
     },
   ]))
     .toEqual([
@@ -22,7 +21,7 @@ test('Should create a new object with a single added property', () => {
 test('Should create a new object with multiple added properties', () => {
   const state = {};
 
-
+  expect(transformStateWithClones(state, [
     {
       type: 'addProperties',
       extraData: {
